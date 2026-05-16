@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="light" lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Plus+Jakarta+Sans:wght@200;400;500;700&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "paper-bg": "#F2EBE3",
+                    "ink-black": "#1A1A1A",
+                    "legal-midnight": "#001D35",
+                    "brand-bordeaux": "#4A0E0E"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-display": ["Newsreader"],
+                    "serif-display": ["DM Serif Display", "serif"]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        /* Blocco dello scroll nativo per l'effetto SPA cinematografica */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #001D35;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .archive-sidebar-link {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Transizioni fluide tra le sezioni */
+        .page-section {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.98) translateY(15px);
+            transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 10;
+        }
+
+        .page-section.page-active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1) translateY(0);
+            z-index: 20;
+        }
+
+        /* Animazioni d'ingresso tipografiche */
+        @keyframes customFadeInUp {
+            0% { opacity: 0; transform: translateY(30px); filter: blur(3px); }
+            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+
+        .anim-title {
+            animation: customFadeInUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        }
+        
+        .anim-reveal {
+            opacity: 0;
+            animation: customFadeInUp 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="text-white font-body-md antialiased">
+
+<nav class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-6 h-20 z-50 bg-[#001D35]/40 backdrop-blur-xl border-b border-white/5">
+    <div id="main-nav" class="flex items-center gap-8 font-['Plus_Jakarta_Sans'] tracking-wide text-sm">
+        <a class="nav-btn text-white font-semibold transition-all hover:text-white" href="#home">Home</a>
+        <a class="nav-btn text-white/50 transition-all hover:text-white" href="#special-olympics">PW - Special Olympics</a>
+        <a class="nav-btn text-white/50 transition-all hover:text-white" href="#cre-estivo">CRE estivo</a>
+        <a class="nav-btn text-white/50 transition-all hover:text-white" href="#studio-legale">Studio legale</a>
+    </div>
+    <div class="hidden md:flex items-center text-white/30 text-[10px] font-label-caps tracking-[0.2em]">
+        MATURITÀ 2026
+    </div>
+</nav>
+
+<main class="relative w-full h-full">
+
+    <header id="home" class="page-section page-active flex flex-col justify-center items-center bg-gradient-to-b from-[#001D35] via-[#001324] to-[#000912]">
+        
+        <div class="absolute left-10 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-12 items-center text-white/20 font-label-caps tracking-[0.3em] uppercase">
+            <div class="h-24 w-px bg-white/10"></div>
+            <span class="archive-sidebar-link text-[10px]">INCLUSIONE</span>
+            <span class="archive-sidebar-link text-[10px]">LEGAL DATA</span>
+            <div class="h-24 w-px bg-white/10"></div>
+        </div>
+
+        <div class="text-center z-10 px-6 max-w-5xl mx-auto">
+            <span class="block font-serif-display text-white/40 mb-4 tracking-[0.6em] uppercase text-xs md:text-sm anim-reveal delay-1">
+                PORTFOLIO PERSONALE
+            </span>
+            <h1 class="font-serif-display text-6xl md:text-8xl lg:text-[9.5rem] text-white leading-[0.85] tracking-tighter uppercase anim-title">
+                esperienza fsl
+            </h1>
+            
+            <div class="mt-6 anim-reveal delay-2">
+                <span class="font-headline-display italic font-light text-white/85 text-4xl md:text-5xl lg:text-6xl block tracking-wide">
+                    di <span class="font-serif-display tracking-wide text-white not-italic font-medium normal-case ml-2">Beatrice Gradaschi</span>
+                </span>
+            </div>
+
+            <p class="font-body-lg text-white/60 text-base md:text-lg max-w-2xl mx-auto mt-12 text-center leading-relaxed font-light anim-reveal delay-3">
+                Un viaggio multidisciplinare strutturato tra <span class="text-white font-normal">inclusione</span>, impegno sociale attivo e sistemi di analisi documentale giuridica.
+            </p>
+        </div>
+
+        <div class="absolute bottom-12 left-8 md:left-16 text-left z-10 anim-reveal delay-4">
+            <p class="font-label-caps text-white/30 text-[9px] tracking-[0.3em] uppercase mb-1.5">STUDENTE</p>
+            <p class="font-serif-display text-2xl text-white tracking-wide mb-1">Beatrice Gradaschi</p>
+            <p class="font-body-md text-[10px] text-white/50 uppercase tracking-[0.15em] font-light">Informatica & Telecomunicazioni</p>
+        </div>
+
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay">
+            <img class="w-full h-full object-cover" alt="Texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdHjOwwjK6amhzpgviZhBwa8P-Ts2tz6uzBAmBPuhe3fj_sdGLeIpmBEZrjRZnTq5fs1y74jc4Kqiuw5i--ddS96Hof_zN66eiU1oYhwzpr09QOpzoASUB0VBaTv4kxHrqZqdRP_BpxDpa0YP4MVCszGtAYgBDjil_04gFiHYQFTd9iEFSWZib5tUCvqwmvwX0LvRBCeJUO1wOxuS_lAKY830xssU6AdmQiZRSfqycbezSNr_zUycTH80WK6Ud5J5q4QnaXEL03g"/>
+        </div>
+    </header>
+
+
+    <section id="special-olympics" class="page-section flex items-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#5c1212] to-[#2b0505] px-8">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+            
+            <div class="lg:col-span-2 space-y-8">
+                <span class="inline-block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase">
+                    Progetto 01 / Sviluppo & Accessibilità
+                </span>
+                <h2 class="font-serif-display text-5xl md:text-7xl text-white uppercase leading-none tracking-tight">
+                    PW - Special Olympics
+                </h2>
+                <p class="font-body-lg text-white/90 text-xl leading-relaxed font-light">
+                    Sviluppo di una piattaforma web mirata all'ottimizzazione e alla digitalizzazione dei flussi di lavoro logistici e organizzativi per l'evento internazionale Special Olympics.
+                </p>
+                <p class="font-body-md text-white/70 leading-relaxed text-sm">
+                    L'architettura software è stata strutturata ponendo al centro i vincoli rigorosi di accessibilità web (WCAG 2.1), garantendo che l'interfaccia utente risultasse pienamente fruibile. Un connubio perfetto tra lo sviluppo logico-informatico e la sensibilità etica dell'inclusione sociale.
+                </p>
+            </div>
+            
+            <div class="bg-white p-10 text-ink-black shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] rounded-sm transform lg:rotate-2 border-l-8 border-[#4A0E0E] transition-transform duration-500 hover:rotate-0">
+                <span class="material-symbols-outlined text-[#4A0E0E] text-5xl mb-4">diversity_1</span>
+                <h3 class="font-serif-display text-2xl text-[#4A0E0E] mb-2">Core Tech Assets</h3>
+                <div class="w-12 h-[2px] bg-[#4A0E0E]/20 mb-4"></div>
+                <ul class="space-y-3 font-body-md text-xs text-ink-black/80">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4A0E0E] rounded-full"></span> <strong>Frontend:</strong> HTML5 Semantic UI, Tailwind</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4A0E0E] rounded-full"></span> <strong>Design:</strong> Inclusivo ed Accessibile</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4A0E0E] rounded-full"></span> <strong>Valori:</strong> Interazione e Teamworking</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="cre-estivo" class="page-section flex items-center bg-[#F2EBE3] text-ink-black px-8">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+            
+            <div class="bg-white p-10 text-ink-black shadow-2xl rounded-sm transform lg:-rotate-2 border-l-8 border-[#001D35] order-2 lg:order-1 transition-transform duration-500 hover:rotate-0">
+                <span class="material-symbols-outlined text-[#001D35] text-5xl mb-4">analytics</span>
+                <h3 class="font-serif-display text-2xl text-[#001D35] mb-2">Management Data</h3>
+                <div class="w-12 h-[2px] bg-[#001D35]/20 mb-4"></div>
+                <ul class="space-y-3 font-body-md text-xs text-ink-black/80">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Ruolo:</strong> Organizzazione Logistica</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Soluzioni:</strong> Risoluzione conflitti in tempo reale</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Soft Skills:</strong> Leadership situazionale</li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-2 space-y-8 order-1 lg:order-2">
+                <span class="inline-block px-3 py-1 border border-black/10 rounded-full font-label-caps text-ink-black/60 text-[10px] tracking-widest uppercase">
+                    Esperienza 02 / Project & People Operations
+                </span>
+                <h2 class="font-serif-display text-5xl md:text-7xl text-[#4A0E0E] uppercase leading-none tracking-tight">
+                    CRE estivo
+                </h2>
+                <p class="font-body-lg text-[#4A0E0E] text-xl leading-relaxed font-light">
+                    Un'esperienza immersiva sul campo focalizzata sulla gestione di gruppi complessi, pianificazione strategica giornaliera e dinamiche di leadership.
+                </p>
+                <p class="font-body-md text-ink-black/70 leading-relaxed text-sm">
+                    L'attività ha richiesto un approccio rigoroso all'organizzazione del tempo e delle risorse. Coordinare e interfacciarsi con costanza con figure interne e nuclei familiari ha permesso di convertire attitudini empatiche in vere competenze gestionali e di problem solving operativo.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="studio-legale" class="page-section flex items-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#002d54] to-[#000f1c] px-8">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
+            
+            <div class="lg:col-span-2 space-y-8">
+                <span class="inline-block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase">
+                    FSL EX PCTO / Legal Tech & Data Processing
+                </span>
+                <h2 class="font-serif-display text-5xl md:text-7xl text-white uppercase leading-none tracking-tight">
+                    Studio legale
+                </h2>
+                <p class="font-body-lg text-white/90 text-xl leading-relaxed font-light">
+                    Analisi dei processi di recupero crediti e contratti di fideiussione attraverso lo studio approfondito, l'esame e l'interpretazione logica di memorie difensive ed atti giudiziari.
+                </p>
+                <p class="font-body-md text-white/70 leading-relaxed text-sm">
+                    L'esperienza ha evidenziato lo stretto legame tra la strutturazione algoritmica del software e la logica formale del diritto. La necessità di estrapolare dati precisi da faldoni complessi ha sottolineato l'importanza cruciale che l'Information Management e la digitalizzazione dei flussi informativi rivestono oggi negli studi legali moderni.
+                </p>
+            </div>
+            
+            <div class="bg-white p-10 text-ink-black shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] rounded-sm transform lg:rotate-2 border-l-8 border-[#001D35] transition-transform duration-500 hover:rotate-0">
+                <span class="material-symbols-outlined text-[#001D35] text-5xl mb-4">gavel</span>
+                <h3 class="font-serif-display text-2xl text-[#001D35] mb-2">Legal Tech Analysis</h3>
+                <div class="w-12 h-[2px] bg-[#001D35]/20 mb-4"></div>
+                <ul class="space-y-3 font-body-md text-xs text-ink-black/80">
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Ambiti:</strong> Recupero crediti, Fideiussioni</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Metodo:</strong> Lettura critica di memorie ed atti</li>
+                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#001D35] rounded-full"></span> <strong>Competenze:</strong> Gestione e sintesi dei dati</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<script>
+    document.querySelectorAll('.nav-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('page-active');
+                });
+                
+                targetSection.classList.add('page-active');
+                
+                document.querySelectorAll('.nav-btn').forEach(btn => {
+                    btn.classList.remove('text-white', 'font-semibold');
+                    btn.classList.add('text-white/50');
+                });
+                this.classList.add('text-white', 'font-semibold');
+                this.classList.remove('text-white/50');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
