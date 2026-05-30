@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html class="light" lang="it">
-<head>
+<!DOCTYPE html><html class="light" lang="it"><head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -29,7 +27,6 @@
       }
     </script>
     <style>
-        /* Blocco dello scroll nativo per l'effetto SPA cinematografica */
         html, body {
             margin: 0;
             padding: 0;
@@ -43,7 +40,6 @@
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
 
-        /* Transizioni fluide tra le sezioni */
         .page-section {
             position: absolute;
             inset: 0;
@@ -65,7 +61,6 @@
             z-index: 20;
         }
 
-        /* Animazioni d'ingresso tipografiche */
         @keyframes customFadeInUp {
             0% { opacity: 0; transform: translateY(30px); filter: blur(3px); }
             100% { opacity: 1; transform: translateY(0); filter: blur(0); }
@@ -84,7 +79,6 @@
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.6s; }
 
-        /* Sottolineatura animata e minimale per la barra di navigazione */
         .nav-btn {
             position: relative;
             display: inline-block;
@@ -105,11 +99,7 @@
             width: 100%;
             left: 0;
         }
-    </style>
-</head>
-<body class="text-white font-body-md antialiased">
-
-<nav class="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-6 h-20 z-50 bg-[#001D35]/40 backdrop-blur-xl border-b border-white/5">
+    </style></head><body class="text-white font-body-md antialiased"><nav class="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-6 h-20 z-50 bg-[#001D35]/40 backdrop-blur-xl border-b border-white/5">
     <div id="main-nav" class="flex items-center gap-6 font-label-caps text-[11px] tracking-[0.2em] uppercase font-light">
         <a class="nav-btn nav-active text-white transition-all duration-300" href="#home">Home</a>
         <span class="text-white/10 select-none text-[9px]">•</span>
@@ -122,13 +112,9 @@
     
     <div class="hidden md:flex items-center text-white/30 text-[10px] font-label-caps tracking-[0.2em]">
         MATURITÀ 2026
-    </div>
-</nav>
-
-<main class="relative w-full h-full">
+    </div></nav><main class="relative w-full h-full">
 
     <header id="home" class="page-section page-active flex flex-col justify-center items-center bg-gradient-to-b from-[#001D35] via-[#001324] to-[#000912]">
-        
         <div class="text-center z-10 px-6 max-w-5xl mx-auto">
             <span class="block font-serif-display text-white/40 mb-4 tracking-[0.6em] uppercase text-xs md:text-sm anim-reveal delay-1">
                 PORTFOLIO PERSONALE
@@ -136,7 +122,6 @@
             <h1 class="font-serif-display text-5xl md:text-7xl lg:text-[7.5rem] text-white leading-[0.9] tracking-tighter uppercase anim-title">
                 le mie esperienze FSL
             </h1>
-
             <p class="font-body-lg text-white/60 text-base md:text-lg max-w-2xl mx-auto mt-12 text-center leading-relaxed font-light anim-reveal delay-2">
                 Un viaggio multidisciplinare strutturato tra inclusione, impegno sociale attivo e documenti giuridici.
             </p>
@@ -153,20 +138,17 @@
         </div>
     </header>
 
-
     <section id="special-olympics" class="page-section flex flex-col justify-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#5c1212] to-[#2b0505] px-8">
-        <div class="max-w-4xl mx-auto w-full flex flex-col justify-between h-[70vh]">
-            
-            <div class="space-y-6">
+        <div class="max-w-5xl mx-auto w-full flex flex-col justify-between h-[75vh]">
+            <div class="space-y-4">
                 <div>
-                    <span class="block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase w-fit mb-4">
+                    <span class="block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase w-fit mb-3">
                         Esperienza 01 / Inclusione
                     </span>
-                    <h2 class="font-serif-display text-5xl md:text-7xl text-white uppercase leading-none tracking-tight">
+                    <h2 class="font-serif-display text-5xl md:text-6xl text-white uppercase leading-none tracking-tight">
                         PW - Special Olympics
                     </h2>
-
-                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-xs md:text-sm text-white/80 font-body-md tracking-wide">
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-xs md:text-sm text-white/80 font-body-md tracking-wide">
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-red-400">calendar_month</span>
                             <span><strong>Periodo:</strong> dal 06/12/23 al 30/05/24</span>
@@ -174,17 +156,39 @@
                         <span class="text-white/30 hidden sm:inline">•</span>
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-red-400">location_on</span>
-                            <span><strong>Luogo:</strong> Palestra dell’Accademia della Guardia di Finanza, Bergamo</span>
+                            <span><strong>Luogo:</strong> Palestra Accademia Guardia di Finanza, Bergamo</span>
                         </div>
                     </div>
                 </div>
-                
-                <p class="font-body-lg text-white/90 text-xl leading-relaxed font-light pt-2">
-                    Sviluppo di una piattaforma web mirata all'ottimizzazione e alla digitalizzazione dei flussi di lavoro logistici e organizzativi per l'evento internazionale Special Olympics.
-                </p>
-                <p class="font-body-md text-white/70 leading-relaxed text-sm">
-                    L'architettura software è stata strutturata ponendo al centro i vincoli rigorosi di accessibilità web (WCAG 2.1), garantendo che l'interfaccia utente risultasse pienamente fruibile. Un connubio perfetto tra lo sviluppo logico-informatico e la sensibilità etica dell'inclusione sociale.
-                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2 h-[42vh] pr-2 text-xs md:text-[13px] leading-relaxed font-light">
+                    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        <div class="space-y-3 text-white/90">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-red-400 font-bold uppercase border-b border-white/10 pb-1">Struttura del servizio ed attività</h3>
+                            <p>
+                                <strong>Articolazione allenamenti:</strong> Un ciclo di 8 sessioni coordinato a partire dalle 18:30. La routine prevedeva il caratteristico saluto di squadra a centro campo, sessioni mirate di riscaldamento, lo studio tecnico dei fondamentali di pallavolo e la partita finale.
+                            </p>
+                            <p>
+                                <strong>Eventi aggiuntivi:</strong> Partecipazione attiva a manifestazioni sul territorio, tra cui una partita intersquadre presso il CUS di Dalmine con ruoli di accoglienza e prima supervisione logistica per la sicurezza dei ragazzi.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 text-white/90">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-red-400 font-bold uppercase border-b border-white/10 pb-1">Ruoli, Relazioni e Sviluppo Empatico</h3>
+                            <p>
+                                <strong>Integrazione e Tutoraggio:</strong> Superati i timori iniziali grazie all'accoglienza calorosa degli atleti, l'inserimento è stato immediato. Eccellente supporto da parte delle allenatrici, attente a guidare i nuovi partner nell'esecuzione tecnica e nel monitoraggio degli schemi di gioco misti (3 atleti e 3 partner).
+                            </p>
+                            <p>
+                                <strong>Impatto valoriale:</strong> Comprensione profonda della collaborazione come strumento per superare le barriere sociali. L'esperienza ha evidenziato come percorsi personalizzati e sensibilità relazionale permettano il raggiungimento di obiettivi comuni.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3 mt-4 lg:mt-0 w-full overflow-hidden">
+                        <img src="foto 1.jpg" class="w-full h-[22vh] object-cover rounded-xl border border-white/10" alt="PW Foto 1" />
+                        <img src="foto5.JPEG" class="w-full h-[22vh] object-cover rounded-xl border border-white/10" alt="PW Foto 2" />
+                    </div>
+                </div>
             </div>
 
             <div class="space-y-8 pt-6 border-t border-white/10">
@@ -196,7 +200,7 @@
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Empatia ed Ascolto</span>
                         <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Team Working</span>
-                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Problem Solving inclusivo</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Supporto</span>
                     </div>
                 </div>
 
@@ -217,54 +221,72 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-
     <section id="cre-estivo" class="page-section flex flex-col justify-center bg-[#F2EBE3] text-ink-black px-8">
-        <div class="max-w-4xl mx-auto w-full flex flex-col justify-between h-[70vh]">
-            
-            <div class="space-y-6">
+        <div class="max-w-5xl mx-auto w-full flex flex-col justify-between h-[75vh]">
+            <div class="space-y-4">
                 <div>
-                    <span class="block px-3 py-1 border border-black/10 rounded-full font-label-caps text-ink-black/60 text-[10px] tracking-widest uppercase w-fit mb-4">
+                    <span class="block px-3 py-1 border border-black/10 rounded-full font-label-caps text-ink-black/60 text-[10px] tracking-widest uppercase w-fit mb-3">
                         Esperienza 02 / Impegno sociale e attivo
                     </span>
-                    <h2 class="font-serif-display text-5xl md:text-7xl text-[#4A0E0E] uppercase leading-none tracking-tight">
+                    <h2 class="font-serif-display text-5xl md:text-6xl text-[#4A0E0E] uppercase leading-none tracking-tight">
                         CRE estivo
                     </h2>
-
-                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-xs md:text-sm text-ink-black/80 font-body-md tracking-wide">
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-xs md:text-sm text-ink-black/80 font-body-md tracking-wide">
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-[#4A0E0E]">calendar_month</span>
-                            <span><strong>Periodo:</strong> dal 24/06/24 al 28/06/24</span>
+                            <span><strong>Periodo:</strong> Giugno 2024</span>
                         </div>
                         <span class="text-ink-black/20 hidden sm:inline">•</span>
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-[#4A0E0E]">location_on</span>
-                            <span><strong>Luogo:</strong> Oratorio Immacolata Alzano Lombardo</span>
+                            <span><strong>Luogo:</strong> Oratorio Immacolata, Alzano Lombardo</span>
                         </div>
                     </div>
                 </div>
-                
-                <p class="font-body-lg text-[#4A0E0E] text-xl leading-relaxed font-light pt-2">
-                    Un'esperienza immersiva sul campo focalizzata sulla gestione di gruppi complessi, pianificazione strategica giornaliera e dinamiche di leadership.
-                </p>
-                <p class="font-body-md text-ink-black/70 leading-relaxed text-sm">
-                    L'attività ha richiesto un approccio rigoroso all'organizzazione del tempo e delle risorse. Coordinare e interfacciarsi con costanza con figure interne e nuclei familiari ha permesso di convertire attitudini empatiche in vere competenze gestionali e di problem solving operativo.
-                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2 h-[42vh] pr-2 text-xs md:text-[13px] leading-relaxed font-light">
+                    <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        <div class="space-y-3">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-[#4A0E0E] font-bold uppercase border-b border-black/10 pb-1">Struttura del servizio ed attività</h3>
+                            <p class="text-ink-black/90">
+                                <strong>Contesto e logica:</strong> Esperienza di PCTO svolta presso l’Oratorio Immacolata di Alzano Lombardo, con attività estese anche ad Alzano Sopra. Il programma prevedeva l'organizzazione quotidiana dei laboratori e uscite settimanali sul territorio.
+                            </p>
+                            <p class="text-ink-black/90">
+                                <strong>Articolazione:</strong> Gestione e supervisione dei bambini in una routine strutturata tra momenti formativi, compiti, attività ludiche a tappe suddivise per fasce d'età e riunioni conclusive di verifica del team.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-[#4A0E0E] font-bold uppercase border-b border-black/10 pb-1">Ruoli, Relazioni e Soft Skills</h3>
+                            <p class="text-ink-black/90">
+                                <strong>Coordinamento:</strong> Responsabile del sottogruppo delle elementari. Ho affiancato la caposquadra nelle mansioni logistiche e nella gestione diretta degli altri animatori.
+                            </p>
+                            <p class="text-ink-black/90">
+                                <strong>Impatto formativo:</strong> Un percorso di forte responsabilizzazione che ha potenziato le mie attitudini di leadership situazionale, mediazione e problem solving all'interno del gruppo di lavoro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-4 lg:mt-0 w-full overflow-hidden">
+                        <img src="FSL cre.jpeg" class="w-full h-[22vh] object-cover rounded-xl border border-black/10" alt="Foto 1" />
+                        <img src="FSL cre 2.jpeg" class="w-full h-[22vh] object-cover rounded-xl border border-black/10" alt="Foto 2" />
+                    </div>
+                </div>
             </div>
 
-            <div class="space-y-8 pt-6 border-t border-black/10">
+            <div class="space-y-6 pt-4 border-t border-black/10">
                 <div class="flex items-center gap-4">
                     <div class="flex items-center gap-1.5 text-ink-black/40 font-label-caps text-[10px] tracking-wider uppercase shrink-0">
                         <span class="material-symbols-outlined text-sm">psychology</span>
                         <span>Soft Skills:</span>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Leadership situazionale</span>
-                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Public Speaking</span>
-                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Time Management</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Empatia</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Gestione del tempo</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-black/5 border border-black/10 rounded text-ink-black/80">Collaborazione</span>
                     </div>
                 </div>
 
@@ -285,62 +307,55 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-
-    <section id="studio-legale" class="page-section flex flex-col justify-center bg-[#001D35] px-8 relative overflow-hidden">
-        
-        <div class="absolute inset-0 hidden md:block pointer-events-none z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#001D35] via-[#001D35]/80 to-transparent z-10"></div>
-            <img src="immagine%20bea%20fsl.jpeg" alt="SC Avvocati Documenti" class="absolute inset-0 w-full h-full object-cover opacity-65 filter saturate-[0.9] contrast-[1.1] mix-blend-normal" />
+    <section id="studio-legale" class="page-section flex flex-col justify-center bg-[#001D35] px-8 relative">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
+            <img class="w-full h-full object-cover opacity-15 filter grayscale contrast-125" src="SCavvocati.JPEG" alt="Sfondo Studio Legale" style="-webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 85%); mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 85%);"/>
         </div>
-
-        <div class="max-w-4xl mx-auto w-full flex flex-col justify-between h-[75vh] z-10 relative">
-            
-            <div class="space-y-6">
+        <div class="max-w-4xl mx-auto w-full flex flex-col justify-between h-[75vh] relative z-10">
+            <div class="space-y-4">
                 <div>
-                    <span class="inline-block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase w-fit mb-4">
-                        Esperienza 03 / Primo approccio al mio futuro
+                    <span class="block px-3 py-1 border border-white/20 rounded-full font-label-caps text-white/60 text-[10px] tracking-widest uppercase w-fit mb-3">
+                        Esperienza 03 / Il mio percorso futuro
                     </span>
-                    <h2 class="font-serif-display text-5xl md:text-7xl text-white uppercase leading-none tracking-tight">
-                        Studio legale
+                    <h2 class="font-serif-display text-5xl md:text-6xl text-white uppercase leading-none tracking-tight">
+                        Studio Legale
                     </h2>
-
-                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4 text-xs md:text-sm text-white/80 font-body-md tracking-wide">
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-xs md:text-sm text-white/80 font-body-md tracking-wide">
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-blue-400">calendar_month</span>
-                            <span><strong>Periodo:</strong> dal 09/06/25 al 13/06/25</span>
+                            <span><strong>Periodo:</strong> 09/06/25 — 13/06/25</span>
                         </div>
-                        <span class="text-white/30 hidden sm:inline">•</span>
+                        <span class="text-white/20 hidden sm:inline">•</span>
                         <div class="flex items-center gap-1.5">
                             <span class="material-symbols-outlined text-base text-blue-400">location_on</span>
-                            <span><strong>Luogo:</strong> SC Avvocati, Via Palma Il Vecchio, 14 (Bergamo)</span>
+                            <span><strong>Luogo:</strong> SC Avvocati, Via Palma Il Vecchio, 14 (BG)</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 text-white/85 text-xs md:text-[13px] leading-relaxed font-light font-body-md max-w-3xl">
-                    <div class="space-y-4">
-                        <p>
-                            L'impatto con la tutela civile presso lo studio <strong>SC Avvocati</strong> è stato da subito positivo. Accolta con estrema professionalità dall'avvocato <strong>Sara Pezzotta</strong>, ho lavorato in un clima sereno e privo di dinamiche competitive non sane. 
-                        </p>
-                        <p>
-                            Nonostante la complessità tecnica di materie del tutto nuove rispetto al percorso scolastico — come il diritto bancario, tributario, immobiliare e la tutela del fideiussore — ogni concetto mi è stato illustrato con estrema trasparenza, dandomi pieno spazio per il confronto e l'approfondimento logico.
-                        </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2 max-h-[42vh] overflow-y-auto pr-2">
+                    <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-xs md:text-[13px] leading-relaxed font-light text-white/90">
+                        <div class="space-y-3">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-blue-400 font-bold uppercase border-b border-white/10 pb-1">Analisi tecnica ed esperienze d'aula</h3>
+                            <p><strong>Impatto teorico-giuridico:</strong> Approccio analitico a materie civilistiche complesse e distanti dai programmi scolastici, tra cui il diritto bancario, tributario, immobiliare e lo studio delle tutele del fideiussore.</p>
+                            <p><strong>Attività documentale e d'aula:</strong> Esame pratico di memorie difensive, sentenze storiche, schemi ABI e funzionamento tecnico della Centrale Rischi e dei trust.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="font-label-caps text-[10px] tracking-wider text-blue-400 font-bold uppercase border-b border-white/10 pb-1">Metodo di lavoro e orientamento</h3>
+                            <p><strong>Clima e rigore professionale:</strong> Inserimento in un ambiente lavorativo sereno guidato dall'avvocato Sara Pezzotta, caratterizzato da trasparenza comunicativa.</p>
+                            <p><strong>Orientamento formativo:</strong> Acquisizione di solide basi metodologiche e di precisione documentale che mi saranno sicuramente utili nel mio percorso universitario.</p>
+                        </div>
                     </div>
-                    <div class="space-y-4">
-                        <p>
-                            Durante la settimana ho analizzato memorie difensive, sentenze storiche e schemi ABI, comprendendo i meccanismi della Centrale Rischi e l'architettura dei trust. L'esperienza ha trovato il suo momento più significativo nell'opportunità di assistere in prima persona a un'udienza in tribunale dinanzi al giudice.
-                        </p>
-                        <p>
-                            Ho appreso il valore della puntualità assoluta e del rigore documentale: scadenze inderogabili e giornate di stesura d'atto escludono ogni margine d'errore. Una solida base di competenze metodologiche che porterò con me nel futuro percorso di studi in <strong>Giurisprudenza</strong>.
-                        </p>
+                    
+                    <div class="hidden md:block">
+                        <img src="tribunale.jpg" class="w-full h-48 object-cover rounded-xl border border-white/10 shadow-lg" alt="Studio Legale" />
                     </div>
                 </div>
             </div>
-
+            
             <div class="space-y-6 pt-4 border-t border-white/10">
                 <div class="flex items-center gap-4">
                     <div class="flex items-center gap-1.5 text-white/40 font-label-caps text-[10px] tracking-wider uppercase shrink-0">
@@ -349,12 +364,11 @@
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Pensiero Analitico</span>
-                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Precisione & Rigore logico</span>
-                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Collaborazione professionale</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Precisione & Rigore</span>
+                        <span class="text-[11px] px-2.5 py-0.5 bg-white/5 border border-white/10 rounded text-white/80">Collaborazione</span>
                     </div>
                 </div>
-
-                <div class="w-full pt-1 pb-4 flex items-center justify-between text-[10px] font-label-caps tracking-widest">
+                <div class="w-full pt-2 pb-6 flex items-center justify-between text-[10px] font-label-caps tracking-widest">
                     <div class="flex flex-col items-center gap-2 text-white/30 w-12 shrink-0">
                         <div class="w-1.5 h-1.5 rounded-full bg-white/20 my-[4px]"></div>
                         <span>01</span>
@@ -371,27 +385,18 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    </section>
-
-</main>
-
-<script>
+    </section></main><script>
     document.querySelectorAll('.nav-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            
             if (targetSection) {
                 document.querySelectorAll('.page-section').forEach(section => {
                     section.classList.remove('page-active');
                 });
-                
                 targetSection.classList.add('page-active');
-                
                 document.querySelectorAll('.nav-btn').forEach(btn => {
                     btn.classList.remove('text-white', 'nav-active');
                     btn.classList.add('text-white/40');
@@ -400,8 +405,4 @@
                 this.classList.remove('text-white/40');
             }
         });
-    });
-</script>
-
-</body>
-</html>
+    });</script></body></html>
